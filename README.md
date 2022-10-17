@@ -3,12 +3,12 @@
 ##### Constructor - специальный метод, служащий для создания и инициализации объектов, созданных с использованием class. <br><br>
 
 ##### Основные составляющие ангуляра ?
-- Directive
-- Module
-- Service
-- Component
-- Guard
-- Pipe
+- `Directive`
+- `Module`
+- `Service`
+- `Component`
+- `Guard`
+- `Pipe`
 <br><br>
 
 ##### Что такое интерполяция в Angular? <br>
