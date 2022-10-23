@@ -43,17 +43,17 @@ The result of an operation that is not yet complete, but will be at some indefin
  
 ##### 7. What is Directive ? Module ? Service ? Component ? Pipe ? Guard ? <br>
 
-- An Angular module is a class with the @NgModule() decorator that serves as an isolating logical unifying structure for components, directives, filters, and services. All of the listed entities are defined and configured with @NgModule().
-- <br>
-- Guards allow you to restrict navigation along certain routes
-- <br>
-- A service is a class with a narrow, well-defined purpose. It can be a value, a function, a request, etc. The main thing about them is that they are reusable, separating out the pure functionality of the component.
-- <br>
-- Pipes transform the display of values in a template, for example displaying dates in different locales or changing the case of strings in the display. <br><br>
+- `Component` - Components are the most basic UI building block of an Angular app. An Angular app contains a tree of Angular components.
+- `Module` - An Angular module is a class with the @NgModule() decorator that serves as an isolating logical unifying structure for components, directives, filters, and services. All of the listed entities are defined and configured with @NgModule(). <br>
+- `Guard` - Guards allow you to restrict navigation along certain routes <br>
+- `Service` - A service is a class with a narrow, well-defined purpose. It can be a value, a function, a request, etc. The main thing about them is that they are reusable, separating out the pure functionality of the component. <br>
+- `Pipe` - Pipes transform the display of values in a template, for example displaying dates in different locales or changing the case of strings in the display. <br><br>
 
 ##### 8. What are the directives? What do they do? <br>
-- Structure directives affect the DOM and can add/remove elements (ng-template, NgIf, NgFor, NgSwitch, etc)<br>
-- Attribute directives change the appearance or behavior of elements, components or other directives (NgStyle, NgClass, etc)<br><br>
+- `Structure directives` - directives that affect the DOM and can add/remove elements (ng-template, NgIf, NgFor, NgSwitch, etc)<br>
+- `Attribute directives` - directives that change the appearance or behavior of elements, components or other directives (NgStyle, NgClass, etc)
+- `Component Directive` - Directive with its own template
+<br><br>
 
 ##### 9. What is a decorator and what types of decorators do you know? <br>
 A decorator is a way to add metadata to a class declaration. It is a special kind of declaration that can be attached to a class declaration, method, access method, property, or parameter. <br>
