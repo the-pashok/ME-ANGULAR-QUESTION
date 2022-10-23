@@ -1,4 +1,3 @@
-
 # Angular-Interview-Questions
 
 ##### 1. Constructor is a special method used to create and initialize objects created using class. <br><br>
@@ -36,17 +35,20 @@ The result of an operation that is not yet complete, but will be at some indefin
 <br><br><br>
 
 ##### 6. The basic principles of the OOP
-  Encapsulation
-  Abstraction
-  Polymorphism
-  Inheritance
-  <br><br>
+- Encapsulation
+- Abstraction
+- Polymorphism
+- Inheritance
+<br><br>
  
 ##### 7. What is Directive ? Module ? Service ? Component ? Pipe ? Guard ? <br>
 
-- An Angular module is a class with the @NgModule() decorator that serves as an isolating logical unifying structure for components, directives, filters, and services. All of the listed entities are defined and configured with @NgModule(). <br>
-- Guards allow you to restrict navigation along certain routes. <br>
-- A service is a class with a narrow, well-defined purpose. It can be a value, a function, a request, etc. The main thing about them is that they are reusable, separating out the pure functionality of the component. <br>
+- An Angular module is a class with the @NgModule() decorator that serves as an isolating logical unifying structure for components, directives, filters, and services. All of the listed entities are defined and configured with @NgModule().
+- <br>
+- Guards allow you to restrict navigation along certain routes
+- <br>
+- A service is a class with a narrow, well-defined purpose. It can be a value, a function, a request, etc. The main thing about them is that they are reusable, separating out the pure functionality of the component.
+- <br>
 - Pipes transform the display of values in a template, for example displaying dates in different locales or changing the case of strings in the display. <br><br>
 
 ##### 8. What are the directives? What do they do? <br>
@@ -141,29 +143,29 @@ Dependencies are services or objects that the class needs to perform its functio
 ##### 20. What are the strategies for detecting changes? <br>
 - There are two strategies in total - `Default` and `OnPush`. If all components use the first strategy, Zone checks the entire tree regardless of where the change occurred. To tell Angular that we will comply with the performance improvement conditions we need to use the OnPush change detection strategy. This will tell Angular that our component depends only on input data and any object that is passed to it should be considered immutable. This is all built on the principle of the Mili automaton, where the current state depends only on the input values. <br><br>
 
-##### 21. Расскажите про OnPush Change Detection Strategy
-- On push change detection означает, что обнаружение изменений в компоненте выполняется только при изменении входных данных, а при изменении входных данных должен измениться весь их объект. Это означает, что если изменяется только ссылка, то обнаружение изменений не будет запущено.
+##### 21. Tell us about OnPush Change Detection Strategy
+- On push change detection means that change detection in a component is only run when the input data changes, and when the input data changes the whole object must change. This means that if only a reference is changed, change detection will not be triggered.
 <br><br>
 
-##### 22. Что такое ViewEncapsulation ?
-ViewEncapsulation определяет, могут ли шаблон и стили, определенные в компоненте, влиять на все приложение или наоборот. Все компоненты с инкапсуляцией None будут иметь свои стили, дублированные во всех компонентах с собственной инкапсуляцией.
+##### 22. What is ViewEncapsulation ?
+ViewEncapsulation determines whether the template and styles defined in a component can affect the entire application or vice versa. All components with None encapsulation will have their styles duplicated in all components with their own encapsulation.
 <br><br>
-- Инкапсуляция представления ShadowDom использует собственную реализацию теневой DOM браузера для присоединения теневой DOM к элементу узла компонента, а затем помещает представление компонента внутри этой теневой DOM. Стили компонента включены в теневой DOM.
-- Эмулированная инкапсуляция представления (по умолчанию) имитирует поведение теневой модели DOM путем предварительной обработки (и переименования) кода CSS для эффективного применения CSS к представлению компонента.
-- Нет означает, что Angular не выполняет инкапсуляцию представления. Angular добавляет CSS к глобальным стилям. Обсуждаемые ранее правила определения объема, изоляции и защиты не применяются. По сути, это то же самое, что и вставка стилей компонента в HTML.
+- `ShadowDom` - Angular uses the browser's built-in Shadow DOM API to enclose the component's view inside a ShadowRoot, used as the component's host element, and apply the provided styles in an isolated manner.
+- `Emulated` - Angular modifies the component's CSS selectors so that they are only applied to the component's view and do not affect other elements in the application, emulating Shadow DOM behavior.
+- 'None' - Angular does not apply any sort of view encapsulation meaning that any styles specified for the component are actually globally applied and can affect any HTML element present within the application. This mode is essentially the same as including the styles into the HTML itself.
 
 <br><br>
 
-##### 23. Что такое Shadow DOM в angular?
-Shadow DOM подобен параллельному дереву DOM, размещенному внутри компонента (элемент HTML, не путать с компонентами Angular), скрытого от основного дерева DOM. Никакая часть приложения не имеет доступа к этой теневой DOM, кроме самого компонента.
+##### 23. What is Shadow DOM in angular?
+The Shadow DOM is like a parallel DOM tree placed inside a component (an HTML element, not to be confused with Angular components) hidden from the main DOM tree. No part of the application has access to this shadow DOM other than the component itself.
 
 <br><br><br>
 
-##### 24. Что такое HTTP Interceptors?
-- Interceptor (перехватчик) - просто причудливое слово для функции, которая получает запросы / ответы до того, как они будут обработаны / отправлены на сервер. Нужно использовать перехватчики, если имеет смысл предварительно обрабатывать многие типы запросов одним способом. Например нужно для всех запросов устанавливать хедер авторизации
+##### 24. What are HTTP Interceptors?
+- Interceptor is just a fancy word for a function that gets requests/responses before they are processed/sent to the server. You should use interceptors if it makes sense to pre-process many types of requests in one way. For example, it is necessary to set an authorization header for all requests
 <br><br><br>
 
-##### 25. Что такое роутинг и как его создать в Angular?
+##### 25. What is routing and how to create it in Angular?
 Роутинг позволяет реализовать навигацию от одного view приложения к другому при работе пользователя с приложением.
 Это реализовано через взаимодействие с адресной строкой, Angular Router интерпретирует ее как инструкцию по переходу между view. Возможна передача параметров вспомогательному компоненту для конкретизирования предоставляемого контента. Навигация может осуществлять по ссылкам на странице, кнопкам или другим элементам, как кнопки "вперед-назад" в браузере.
 Для создания роутинга первым делом необходимо импортировать "RouterModule" и "Routes" в AppModule.
