@@ -166,29 +166,32 @@ The Shadow DOM is like a parallel DOM tree placed inside a component (an HTML el
 <br><br><br>
 
 ##### 25. What is routing and how to create it in Angular?
-Роутинг позволяет реализовать навигацию от одного view приложения к другому при работе пользователя с приложением.
-Это реализовано через взаимодействие с адресной строкой, Angular Router интерпретирует ее как инструкцию по переходу между view. Возможна передача параметров вспомогательному компоненту для конкретизирования предоставляемого контента. Навигация может осуществлять по ссылкам на странице, кнопкам или другим элементам, как кнопки "вперед-назад" в браузере.
-Для создания роутинга первым делом необходимо импортировать "RouterModule" и "Routes" в AppModule.
-Затем необходимо реализовать конфигурацию по приложению, определить path и относящие к ним компоненты, и в метод RouterModule.forRoot() передать конфигурацию.
-Наконец необходимо добавить routerLink в шаблон.
-<br><br><br>
-
-##### 26. Расскажите про lazy load и как оно работает ?
-Ленивая загрузка - это метод в Angular, который позволяет загружать компоненты JavaScript асинхронно при активации определенного маршрута. Это увеличивает скорость загрузки приложения за счет разделения приложения на несколько пакетов. Когда пользователь перемещается по приложению, пакеты загружаются по мере необходимости. <br>
-Ленивая загрузка в целом - это концепция, при которой мы откладываем загрузку объекта до тех пор, пока он не понадобится. В Angular все компоненты JavaScript, объявленные в массиве объявлений app. модуль. ts объединяются и загружаются одним махом, когда пользователь посещает наш сайт.
-<br>
-Преимущества: производительность и размер
+Routing allows you to implement navigation from one application view to another when the user interacts with the application.
+This is implemented through interaction with the address bar, Angular Router interprets it as an instruction to navigate between views. It is possible to pass parameters to an auxiliary component to instantiate the content provided. Navigation can follow links on the page, buttons, or other elements, like forward-backward buttons in a browser.
+To create routing, the first thing to do is to import "RouterModule" and "Routes" into the AppModule.
+Then you need to implement the configuration on the application, define the path and related components, and pass the configuration to the RouterModule.forRoot() method.
+Finally we need to add routerLink to the template.
 <br><br>
 
-##### 27. Что такое ElementRef, TemplateRef
-Основная и самая часто используемая абстракция - ElementRef. Она хранит в себе "оригинальный" HTML-элемент в свойстве nativeElement так, если бы он был получен с помощью нативного JavaScript.
+##### 26. Tell me about lazy load and how it works ?
+Lazy loading is a method in Angular that allows JavaScript components to be loaded asynchronously when a certain route is activated. This increases the loading speed of the application by splitting the application into multiple packets. As the user navigates through the application, packets are loaded as needed.
 <br>
-Ранее уже упоминалось, что ссылка типа `TemplateRef` возвращается в том случае, если запрос возвращает представление, заключенное в специальные теги `<ng-template />`.
+Lazy loading in general is a concept where we delay loading an object until we need it. In Angular, all the JavaScript components declared in the app. module declaration array are combined and loaded in one go when the user visits our site.
+<br>
+Advantages: Performance and size
+<br><br>
 
-Класс TemplateRef содержит единственное свойство `elementRef`, содержащее экземпляр класса `ElementRef`, который в свою очередь ссылается на host-элемент.
+##### 27. What are ElementRef, TemplateRef
+The basic and most commonly used abstraction is ElementRef, which stores the "original" HTML element in a nativeElement property as if it were derived from native JavaScript.
+<br>
+It was mentioned earlier that a reference of the `TemplateRef` type is returned if the query returns a representation enclosed in special tags `<ng-template />`.
 
-##### 28. Что такое JIT и AOT, в чем их отличия и каковы сферы применения?
-Angular приложение можно скомпилировать с помощью команд ng serve и ng build. При этом, можно работать с разными видами компиляции:
+The TemplateRef class contains a single property `elementRef` that contains an instance of the `ElementRef` class, which in turn refers to the host element.
 
-- JIT - (Just-In-Time compilation) - компиляция "на лету", динамическая компилияция. В Angular используется по умолчанию.
-- AOT - (Ahead-Of-Time compilation) - компиляции перед исполнением.
+Represents an embedded template that can be used to instantiate embedded views.
+
+##### 28. What are JIT and AOT, what are their differences and what are their applications?
+An Angular application can be compiled using the ng serve and ng build commands. You can work with different types of compilation:
+
+- JIT - (Just-In-Time compilation) - compilation on the fly, dynamic compilation. Angular is the default.
+- AOT (Ahead-Of-Time compilation) - compilation before execution.
