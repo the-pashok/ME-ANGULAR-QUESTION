@@ -136,7 +136,7 @@ Dependencies are services or objects that the class needs to perform its functio
 <br><br>
 
 ##### 19. What is Change Detection, how does the Change Detection Mechanism work?
-- `Change Detection` - процесс синхронизации модели с представлением. In Angular, the flow of information is unidirectional, even when using ngModel to implement two-way binding, which is syntactic sugar on top of the unidirectional flow. <br>
+- `Change Detection` - the process of synchronizing the model with the representation. In Angular, the flow of information is unidirectional, even when using ngModel to implement two-way binding, which is syntactic sugar on top of the unidirectional flow. <br>
 - The `Change Detection Mechanism` - only moves forward and never looks back, starting from the root (root) component to the last. That's the point of one-way data flow. The architecture of an Angular application is very simple - a component tree. Each component points to a child, but the child does not point to the parent. One-way flow eliminates the need for a $digest loop.
 <br><br>
 
