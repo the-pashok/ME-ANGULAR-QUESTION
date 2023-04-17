@@ -195,3 +195,16 @@ An Angular application can be compiled using the ng serve and ng build commands.
 
 - JIT - (Just-In-Time compilation) - compilation on the fly, dynamic compilation. Angular is the default.
 - AOT (Ahead-Of-Time compilation) - compilation before execution.
+
+##### 29. What is the component lifecycle mechanism in Angular?
+- `ngOnChanges`: Called when a component's input property changes.
+- `ngOnInit`: called after the first ngOnChanges.
+- `ngDoCheck`: called during each change detection cycle.
+- `ngAfterContentInit`: called after initializing the content of the component.
+- `ngAfterContentChecked`: called after each component content check.
+- `ngAfterViewInit`: called after initializing component views.
+- `ngAfterViewChecked`: called after each check of the component views.
+- `ngOnDestroy`: called just before the component is deleted.
+
+##### 30. What is dependency injection and how is it used in Angular?
+Dependency injection is a design pattern that allows a component to receive dependencies from a separate vendor. This pattern is used in Angular to inject services, pipelines, and other dependencies into components and other parts of the application.
