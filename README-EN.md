@@ -130,6 +130,9 @@ The `Observer`, on the other hand, uses 3 functions to handle the above actions:
 - `error()` - error handling;
 - `complete()` - call after the end of the data stream.
 
+- The `Observables` can be canceled.
+- The `Observables` can be retried (retry and retryWhen) and this is easy to do, unlike Promises.
+
 <br><br>
 
 ##### 15. What is Dependency Injection? <br>
