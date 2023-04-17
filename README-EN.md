@@ -130,7 +130,6 @@ The `Observer`, on the other hand, uses 3 functions to handle the above actions:
 - `error()` - error handling;
 - `complete()` - call after the end of the data stream.
 
-Translated with www.DeepL.com/Translator (free version)
 <br><br>
 
 ##### 15. What is Dependency Injection? <br>
