@@ -113,7 +113,25 @@ They allow us to handle the state fragment data outside the component. The "sele
 <br><br>
 
 ##### 14. What is Observable ?
-- Observable is an observer that subscribes and responds to all events up to the point of unsubscribing. <br><br>
+An `Observer` is a data stream handler object which is passed to it by the Observable.
+
+The `Observable` is a transmitter object of the data stream, there are 2 types:
+
+`Cold` - starts streaming data after the subscribe() call.
+`Hot` - is transmitted immediately after it is created, even if no subscriber is interested in the data.
+Observables perform 3 main actions:
+
+transfer of the next element;
+error message;
+notification of the end of the stream transfer.
+The `Observer`, on the other hand, uses 3 functions to handle the above actions:
+
+- `next()` - processing the next item;
+- `error()` - error handling;
+- `complete()` - call after the end of the data stream.
+
+Translated with www.DeepL.com/Translator (free version)
+<br><br>
 
 ##### 15. What is Dependency Injection? <br>
 This is an important pattern in application design. In Angular, the implementation of dependencies is implemented from under the hood. <br>
