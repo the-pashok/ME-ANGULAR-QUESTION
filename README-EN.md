@@ -60,10 +60,10 @@ A decorator is a way to add metadata to a class declaration. It is a special kin
 Decorators use the form @expression, where expression is the function that will be called at runtime with information about the decorated declaration.
 
 To write our own decorator, we need to make it a factory and define its type:<br>
-- ClassDecorator
-- PropertyDecorator
-- MethodDecorator
-- ParameterDecorator
+- `Class decorators`, which are used to add functionality to a class e.g. @Component and @NgModule
+- `Property decorators` for adding functionality to properties inside classes, e.g. @Input and @Output
+- `Method decorators` for methods inside classes, e.g. @HostListener
+- `Parameter decorators` for parameters inside class constructors, e.g. @Inject
 <br><br>
 
 ##### 10. NGRX
